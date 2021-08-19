@@ -12,7 +12,7 @@ onload = async () => {
   const res = div();
   credit();
   style({ a: { color: "gray !important" }});
-  const limit = 200;
+  const limit = 0; // 2000;
 
   // データ読み込み
   const url = "./icons.json";
@@ -48,7 +48,7 @@ onload = async () => {
       div.appendChild(img);
 
       res.appendChild(div);
-      if (cnt++ == limit) {
+      if (++cnt == limit) {
         break;
       }
     }
