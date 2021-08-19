@@ -1,0 +1,70 @@
+<meta charset=utf-8><script type=module>
+import { create, add, style, h1, inp, div, link } from "https://js.sabae.cc/stdom.js";
+//import { CSV } from "https://code4sabae.github.io/js/CSV.js";
+//import { shuffle } from "https://js.sabae.cc/shuffle.js";
+import { search } from "https://js.sabae.cc/search.js";
+
+onload = async () => {
+  // ページ構築
+  h1("アイコン検索 - search the material icon");
+  const inputfilter = inp();
+  const cate = div();
+  const res = div();
+  credit();
+  style({ a: { color: "gray !important" }});
+  const limit = 200;
+
+  // データ読み込み
+  const url = "./icons.json";
+  const data = await (await fetch(url)).json();
+  console.log(data);
+  //shuffle(data);
+
+  const cates = new Set();
+  data.forEach(f => cates.add(f.substring(0, f.indexOf("/"))));
+  cates.forEach(c => {
+    const a = create("a", cate);
+    a.href = "#" + c;
+    a.textContent = c;
+    a.style.marginRight = ".5em";
+  });
+
+  // 検索表示機能
+  inputfilter.onchange = inputfilter.onkeyup = () => {
+    const hits = search(data, inputfilter.value);
+    document.location.hash = "#" + inputfilter.value;
+    //console.log(hits, hits.length);
+    res.innerHTML = "";
+    let cnt = 0;
+    for (const d of hits) {
+      const div = create("div");
+      div.style.margin = "1vw 1vw";
+      div.style.display = "inline-block";
+
+      const img = new Image();
+      img.style.width = "5vw";
+      img.loading = "lazy"; // 画像は表示するときに読み込み
+      img.src = "src/" + d;
+      div.appendChild(img);
+
+      res.appendChild(div);
+      if (cnt++ == limit) {
+        break;
+      }
+    }
+  };
+
+  // 初期画面
+  inputfilter.value = decodeURIComponent(document.location.hash.substring(1)) || "";
+  inputfilter.onchange();
+  window.onhashchange = () => {
+    inputfilter.value = decodeURIComponent(document.location.hash.substring(1)) || "";
+    inputfilter.onchange();
+  };
+};
+const credit = () => {
+  add("hr");
+  link("DATA 'Material design icons' Apatch License by Google", "https://github.com/google/material-design-icons");
+  link("App CC BY Code for Fukui", "https://fukuno.jig.jp/3226");
+};
+</script>
