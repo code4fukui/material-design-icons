@@ -6,7 +6,7 @@ The icons are designed under the [material design guidelines](https://material.i
 
 ## search app
 
-https://code4fukui.githubi.io/material-design-icons/
+https://code4fukui.github.io/material-design-icons/
 
 ### 4.0.0 Update
 
