@@ -38,3 +38,4 @@ for (const name in unique) {
 
 const res2 = await dir2array("src");
 await Deno.writeTextFile("icons.json", JSON.stringify(res2, null, 2));
+console.log(res2.length);
