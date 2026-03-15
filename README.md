@@ -1,5 +1,7 @@
 # material-design-icons
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 Material design icons is the official icon set from Google. They can be browsed at https://fonts.google.com/icons. The icons are designed under the [material design guidelines](https://material.io/guidelines/).
 
 ## Demo
