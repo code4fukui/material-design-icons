@@ -1,43 +1,52 @@
-## Material design icons
+# Material Design Icons
 
-Material design icons is the official icon set from Google.
-They can be browsed at https://fonts.google.com/icons.
-The icons are designed under the [material design guidelines](https://material.io/guidelines/).
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
-## search app
+This repository contains the official [Material Design Icons](https://fonts.google.com/icons) set from Google. The icons are designed under the [Material Design guidelines](https://material.io/guidelines/).
 
-https://code4fukui.github.io/material-design-icons/
+## Demo
 
-### 4.0.0 Update
+A live demo is available, allowing you to search and browse all icons in this collection:
 
-Restructured repository, updated assets.
+**[https://code4fukui.github.io/material-design-icons/](https://code4fukui.github.io/material-design-icons/)**
 
-### 3.0.1 Update
+## Features
 
-* Changed license in package.json.
-* Added missing device symbol sprites.
+*   **Complete Icon Set:** Provides the entire Material Design icon library as individual SVG files.
+*   **Five Styles:** Each icon is available in five official themes:
+    *   Filled (Default)
+    *   Outlined
+    *   Round
+    *   Sharp
+    *   Two-Tone
+*   **SVG Format:** All icons are 24x24px SVGs, optimized for web and mobile use.
+*   **Organized Structure:** Icons are sorted into categories for easy browsing (e.g., `maps`, `navigation`, `action`).
 
-### 3.0.0 Update
+## Usage
 
-License change to Apache 2.0!
+### For Web (Recommended)
 
-## Getting Started
-
-Read the [developer guide](https://google.github.io/material-design-icons/) on how to use the material design icons in your project.
-
-### Using a font
-
-The `font` folder contains pre-generated font files that can be included in a project. This is especially convenient for the web; however, it is generally better to link to the web font hosted on Google Fonts:
+The easiest way to use these icons on the web is by linking to the web font from Google Fonts. This ensures you always have the latest icons and is highly optimized.
 
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Material+Icons"
-      rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 ```
 
-Read more in the [font portion](https://google.github.io/material-design-icons/#icon-font-for-the-web) of our full developer guide.
+For more details, see the official [Material Icons Developer Guide](https://google.github.io/material-design-icons/).
 
+### Using Individual SVG Files
+
+You can also use the SVG files from this repository directly. Copy the SVG code from a file and embed it in your HTML, or reference the files in your project's assets.
+
+The files are organized by `src/<category>/<icon_name>/<style_name>/24px.svg`.
+
+For example, the "filled" `arrow_forward` icon is located at:
+`src/navigation/arrow_forward/materialicons/24px.svg`
 
 ## License
 
-We have made these icons available for you to incorporate into your products under the [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt). Feel free to remix and re-share these icons and documentation in your products.
-We'd love attribution in your app's *about* screen, but it's not required.
+The icons are released under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).
+
+---
+
+The Material Design icons are a product of Google. This repository and demo are maintained by [Code for Fukui](https://github.com/code4fukui).
